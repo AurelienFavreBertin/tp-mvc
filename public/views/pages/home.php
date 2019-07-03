@@ -9,7 +9,7 @@
         <a href="ajouter-produit.php">Ajout d'un produit</a>
     </li>
     <li>
-        <a href="ajouter-client.php">Ajout d'un client</a>
+        <a href="<?= url('clients/add') ?>">Ajout d'un client</a>
     </li>
 </ul>
 
