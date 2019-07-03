@@ -15,11 +15,13 @@ class ClientsController {
     {
 
         $client = new Client;
-        $client->setField1($_POST['nom']);
-        $client->setField2($_POST['email']);
-        $client->setField3($_POST['telephone']);
-        $client->setField4($_FILES['adresse']);
+        $client->setNom($_POST['nom']);
+        $client->setEmail($_POST['email']);
+        $client->setTelephone($_POST['telephone']);
+        $client->setAdresse($_POST['adresse']);
 
         $client->save();
+
+        view('clients.list');
     }
 }

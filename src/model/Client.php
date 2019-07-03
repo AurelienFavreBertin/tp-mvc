@@ -1,14 +1,14 @@
 <?php
 
-class Example extends Db {
+class Client extends Db {
 
     const TABLE_NAME = "clients";
 
     protected $id;
-    protected $field1;
-    protected $field2;
-    protected $field3;
-    protected $field4;
+    protected $nom;
+    protected $email;
+    protected $telephone;
+    protected $adresse;
 
 
     public function setId($id) {
@@ -16,50 +16,50 @@ class Example extends Db {
         return $this;
     }
 
-    public function setField1($field1) {
-        $this->field1 = $field1;
+    public function setNom($nom) {
+        $this->nom = $nom;
         return $this;
     }
 
-    public function setField2($field2) {
-        $this->field2 = $field2;
+    public function setEmail( $email) {
+        $this-> email = $email;
         return $this;
     }
 
-    public function setField3($field3) {
-        $this->field3 = $field3;
+    public function setTelephone( $telephone) {
+        $this-> telephone = $telephone;
         return $this;
     }
 
-    public function setField4($field4)
+    public function setAdresse( $adresse)
     {
-        $this->field4 = $field4;
+        $this-> adresse = $adresse;
         return $this;
     }
 
 
 
 
-    public function getField1() {
-        return $this->field1;
+    public function getNom() {
+        return $this-> nom;
     }
-    public function getField2() {
-        return $this->field2;
+    public function getEmail() {
+        return $this-> email;
     }
-    public function getField3() {
-        return $this->field3;
+    public function getTelephone() {
+        return $this-> telephone;
     }
-    public function getField4() {
-        return $this->field4;
+    public function getAdresse() {
+        return $this-> adresse;
     }
 
     public function save()
     {
         $data = [
-            "field1"    => $this->getField1(),
-            "field2"    => $this->getField2(),
-            "field3"    => $this->getField3(),
-            "field4"    => $this->getField4()
+            "nom"    => $this->getNom(),
+            "email"    => $this->getEmail(),
+            "telephone"    => $this->getTelephone(),
+            "adresse"    => $this->getAdresse()
         ];
         //if ($this->id > 0) return $this->update();
         $nouvelId = Db::dbCreate(self::TABLE_NAME, $data);
