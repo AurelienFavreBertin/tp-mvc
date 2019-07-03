@@ -14,11 +14,11 @@ class ClientsController {
     public function save()
     {
 
-        $client = new clients;
+        $client = new Client;
         $client->setField1($_POST['nom']);
         $client->setField2($_POST['email']);
         $client->setField3($_POST['telephone']);
-        $client->setPhoto($_FILES['adresse']);
+        $client->setField4($_FILES['adresse']);
 
         $client->save();
     }
