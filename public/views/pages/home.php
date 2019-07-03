@@ -5,13 +5,21 @@
 <hr>
 
 <ul>
-    <li>Liste des produits</li>
-    <li>Liste des clients</li>
+    <li>
+        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Ajout d'un produit</a>
+    </li>
+    <li>
+        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Ajout d'un client</a>
+    </li>
 </ul>
 
 <ul>
-    <li>Ajouter un produit</li>
-    <li>Ajouter un client</li>
+    <li>
+        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Liste des produits</a>
+    </li>
+    <li>
+        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Liste des clients</a>
+    </li>
 </ul>
 
 
