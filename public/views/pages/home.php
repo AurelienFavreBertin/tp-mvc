@@ -20,7 +20,7 @@
     </li>
     <br>
     <li>
-        <a href="<?= url('clients/list') ?>" class="btn btn-sm btn-secondary">Liste des produits</a>
+        <a href="<?= url('produits/list') ?>" class="btn btn-sm btn-secondary">Liste des produits</a>
     </li>
 </ul>
 
