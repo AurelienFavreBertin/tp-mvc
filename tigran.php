@@ -1,1 +1,1 @@
-<?php echo "bonjour les camarade!!! j'ai changé ton fichier" ?>
+<?php echo "bonjour les camarade! !! j'ai changé ton fichier" ?>
