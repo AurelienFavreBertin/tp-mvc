@@ -1,13 +1,26 @@
 <?php ob_start(); ?>
 
-<h2>Add clients</h2>
+<h2>Ajouter un client</h2>
 
-<form class="form" method="post" action="<?= url('clients-add') ?>" enctype="multipart/form-data">
-    <input class="form-control" type="text" name="nom" placeholder="nom" id="">
-    <input class="form-control" type="text" name="email" placeholder="email" id="">
-    <input class="form-control" type="number" name="telephone" placeholder="telephone" id="">
-    <input class="form-control" type="text" name="adresse" placeholder="adresse" id="">
-    <input type="submit" value="Envoyer">
+<form style="padding:10px;" class="form" method="post" action="<?= url('clients-add') ?>" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <input class="form-control" type="text" name="nom" placeholder="nom" id="">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" type="text" name="email" placeholder="email" id="">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" type="number" name="telephone" placeholder="telephone" id="">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" type="text" name="adresse" placeholder="adresse" id="">
+    </div>
+
+    <button class="btn btn-success float-right" type="submit">Ajouter</button>
 </form>
 
 <?php $content = ob_get_clean() ?>
