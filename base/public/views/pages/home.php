@@ -2,9 +2,17 @@
 
 <h1>Bienvenue !</h1>
 
-<p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis minus quia perspiciatis aperiam. Voluptates aliquam incidunt, quo eos quisquam asperiores perspiciatis delectus est et! Nemo quia sed laboriosam fugiat assumenda!
-</p>
+<hr>
+
+<ul>
+    <li>Liste des produits</li>
+    <li>Liste des clients</li>
+</ul>
+
+<ul>
+    <li>Ajouter un produit</li>
+    <li>Ajouter un client</li>
+</ul>
 
 
 <?php $content = ob_get_clean() ?> <?php view('template', compact('content')); ?>
