@@ -10,11 +10,7 @@
     </li>
     <br>
     <li>
-<<<<<<< HEAD
         <a href="<?= url('clients/add') ?>">Ajout d'un client</a>
-=======
-        <a href="#.php" class="btn btn-sm btn-secondary">Ajout d'un produit</a>
->>>>>>> b706ff3f6477c1636a172957cca0e59139ae5c96
     </li>
 </ul>
 <br><br>
