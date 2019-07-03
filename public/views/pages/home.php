@@ -1,24 +1,26 @@
 <?php ob_start(); ?>
 
-<h1>Bienvenue !</h1>
+<h1 class="text-center">Bienvenue !</h1>
 
 <hr>
 
 <ul>
     <li>
-        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Ajout d'un produit</a>
+        <a href="#.php" class="btn btn-sm btn-secondary">Ajout d'un client</a>
     </li>
+    <br>
     <li>
-        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Ajout d'un client</a>
+        <a href="#.php" class="btn btn-sm btn-secondary">Ajout d'un produit</a>
     </li>
 </ul>
-
+<br><br>
 <ul>
     <li>
-        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Liste des produits</a>
+        <a href="#.php" class="btn btn-sm btn-secondary">Liste des clients</a>
     </li>
+    <br>
     <li>
-        <a href="listeBiens.php" class="btn btn-sm btn-secondary">Liste des clients</a>
+        <a href="#.php" class="btn btn-sm btn-secondary">Liste des produits</a>
     </li>
 </ul>
 
