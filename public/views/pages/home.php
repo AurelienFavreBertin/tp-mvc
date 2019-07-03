@@ -6,21 +6,21 @@
 
 <ul>
     <li>
-        <a href="#.php" class="btn btn-sm btn-secondary">Ajout d'un client</a>
+        <a href="<?= url('clients/add') ?>" class="btn btn-sm btn-secondary">Ajout d'un client</a>
     </li>
     <br>
     <li>
-        <a href="<?= url('clients/add') ?>">Ajout d'un client</a>
+        <a href="<?= url('produits/add') ?>" class="btn btn-sm btn-secondary">Ajout d'un produit</a>
     </li>
 </ul>
 <br><br>
 <ul>
     <li>
-        <a href="#.php" class="btn btn-sm btn-secondary">Liste des clients</a>
+        <a href="<?= url('clients/list') ?>" class="btn btn-sm btn-secondary">Liste des clients</a>
     </li>
     <br>
     <li>
-        <a href="#.php" class="btn btn-sm btn-secondary">Liste des produits</a>
+        <a href="<?= url('clients/list') ?>" class="btn btn-sm btn-secondary">Liste des produits</a>
     </li>
 </ul>
 
