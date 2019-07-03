@@ -2,12 +2,11 @@
 
 <h2>Add clients</h2>
 
-<form class="form" method="post" action="<?= url('add-example') ?>" enctype="multipart/form-data">
-    <input class="form-control" type="text" name="field1" id="">
-    <input class="form-control" type="text" name="field2" id="">
-    <input class="form-control" type="text" name="field3" id="">
-    <input class="form-control" type="date" name="field4" id="">
-    <input class="form-control" type="file" name="photo" id="">
+<form class="form" method="post" action="<?= url('clients-add') ?>" enctype="multipart/form-data">
+    <input class="form-control" type="text" name="nom" placeholder="nom" id="">
+    <input class="form-control" type="text" name="email" placeholder="email" id="">
+    <input class="form-control" type="number" name="telephone" placeholder="telephone" id="">
+    <input class="form-control" type="text" name="adresse" placeholder="adresse" id="">
     <input type="submit" value="Envoyer">
 </form>
 
