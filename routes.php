@@ -6,7 +6,7 @@ $router = new Router();
 
 $router->get('', 'PagesController@home' );
 $router->get('list-examples', 'ExamplesController@index');
-$router->get('add-example', 'ExamplesController@add');
+$router->get('ajouter-client', 'ExamplesController@add');
 $router->post('add-example', 'ExamplesController@save');
 
 // Run it!
