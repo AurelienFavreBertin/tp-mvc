@@ -2,6 +2,8 @@
 
 <h2>Ajouter un client</h2>
 
+<hr>
+
 <form style="padding:10px;" class="form" method="post" action="<?= url('clients-add') ?>" enctype="multipart/form-data">
 
     <div class="form-group">
