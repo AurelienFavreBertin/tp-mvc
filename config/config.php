@@ -13,7 +13,7 @@ const DB_USER = 'root';
 const DB_PWD  = '';
 
 const WEBSITE_TITLE = "";
-const BASE_URL = "http://localhost/cours/tp-mvc/";
+const BASE_URL = "http://localhost/tp-mvc/";
 
 const CLASSES_SOURCES = [
     'src/controller',
