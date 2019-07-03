@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 
-<h2>Add clients</h2>
+<h2>add produits</h2>
 
 <form class="form" method="post" action="<?= url('add-example') ?>" enctype="multipart/form-data">
     <input class="form-control" type="text" name="field1" id="">
