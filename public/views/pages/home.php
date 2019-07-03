@@ -6,19 +6,19 @@
 
 <ul>
     <li>
-        <a href="listeBiens.php">Ajout d'un produit</a>
+        <a href="ajouter-produit.php">Ajout d'un produit</a>
     </li>
     <li>
-        <a href="listeBiens.php">Ajout d'un client</a>
+        <a href="ajouter-client.php">Ajout d'un client</a>
     </li>
 </ul>
 
 <ul>
     <li>
-        <a href="listeBiens.php">Liste des produits</a>
+        <a href="liste-produits.php">Liste des produits</a>
     </li>
     <li>
-        <a href="listeBiens.php">Liste des clients</a>
+        <a href="liste-clients.php">Liste des clients</a>
     </li>
 </ul>
 
