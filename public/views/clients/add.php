@@ -7,7 +7,7 @@
 
         <hr>
 
-        <form style="padding:10px;" class="form" method="post" action="<?= url('clients-add') ?>" enctype="multipart/form-data">
+        <form style="padding:10px;" class="form" method="post" action="<?= url('clients/add') ?>" enctype="multipart/form-data">
 
             <div class="form-group">
                 <input class="form-control" type="text" name="nom" placeholder="nom" id="">
