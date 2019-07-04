@@ -9,6 +9,8 @@ class Client extends Db {
     protected $email;
     protected $telephone;
     protected $adresse;
+    protected $cp;
+    protected $ville;
 
 
     public function setId($id) {
@@ -37,6 +39,18 @@ class Client extends Db {
         return $this;
     }
 
+    public function setCp($cp)
+    {
+        $this->cp = $cp;
+        return $this;
+    }
+
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+        return $this;
+    }
+
 
 
 
@@ -52,15 +66,24 @@ class Client extends Db {
     public function getAdresse() {
         return $this-> adresse;
     }
+    public function getCp() {
+        return $this-> cp;
+    }
+    public function getVille() {
+        return $this-> ville;
+    }
 
     public function save()
     {
         $data = [
-            "nom"    => $this->getNom(),
-            "email"    => $this->getEmail(),
-            "telephone"    => $this->getTelephone(),
-            "adresse"    => $this->getAdresse()
+            "nom"       => $this->getNom(),
+            "email"     => $this->getEmail(),
+            "telephone" => $this->getTelephone(),
+            "adresse"   => $this->getAdresse(),
+            "cp"        => $this->getCp(),
+            "ville"     => $this->getVille()
         ];
+        
         //if ($this->id > 0) return $this->update();
         $nouvelId = Db::dbCreate(self::TABLE_NAME, $data);
         $this->setId($nouvelId);

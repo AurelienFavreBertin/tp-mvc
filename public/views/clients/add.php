@@ -10,19 +10,27 @@
         <form style="padding:10px;" class="form" method="post" action="<?= url('clients/add') ?>" enctype="multipart/form-data">
 
             <div class="form-group">
-                <input class="form-control" type="text" name="nom" placeholder="nom" id="">
+                <input class="form-control" type="text" name="nom" placeholder="Nom" id="">
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="text" name="email" placeholder="email" id="">
+                <input class="form-control" type="text" name="email" placeholder="Email" id="">
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="number" name="telephone" placeholder="telephone" id="">
+                <input class="form-control" type="number" name="telephone" placeholder="Telephone" id="">
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="text" name="adresse" placeholder="adresse" id="">
+                <input class="form-control" type="text" name="adresse" placeholder="Adresse" id="">
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" type="text" name="cp" placeholder="Code Postal" id="">
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" type="text" name="ville" placeholder="Ville" id="">
             </div>
 
             <button class="btn btn-success float-right" type="submit">Ajouter</button>

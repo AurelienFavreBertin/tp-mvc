@@ -8,7 +8,8 @@ class ClientsController {
     }
     public function list()
     {
-        view('clients.list');
+        $clients = Client::findAll();
+        view('clients.list', compact('clients'));
     }
 
     public function save()
@@ -19,9 +20,11 @@ class ClientsController {
         $client->setEmail($_POST['email']);
         $client->setTelephone($_POST['telephone']);
         $client->setAdresse($_POST['adresse']);
+        $client->setCp($_POST['cp']);
+        $client->setVille($_POST['ville']);
 
         $client->save();
 
-        view('clients.list');
+        $this->list();
     }
 }

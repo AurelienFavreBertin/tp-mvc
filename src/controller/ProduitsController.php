@@ -8,19 +8,22 @@ class ProduitsController {
     }
     public function list()
     {
-        view('produits.list');
+        $produits = Produit::findAll();
+        view('produits.list', compact('produits'));
     }
 
     public function save()
     {
 
-        $flight = new Example;
-        $flight->setField1($_POST['field1']);
-        $flight->setField2($_POST['field2']);
-        $flight->setField3($_POST['field3']);
-        $flight->setField4($_POST['date'], $_POST['time']);
-        $flight->setPhoto($_FILES['photo']);
+        $produit = new Produit;
+        $produit->setNom($_POST['nom']);
+        $produit->setDescription($_POST['description']);
+        $produit->setPrix($_POST['prix']);
+        $produit->setStock($_POST['stock']);
+        $produit->setPhoto($_FILES['photo']);
 
-        $flight->save();
+        $produit->save();
+
+        $this->list();
     }
 }
