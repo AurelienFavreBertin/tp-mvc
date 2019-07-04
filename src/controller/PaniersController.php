@@ -6,7 +6,7 @@ class PaniersController
     public function list()
     {
         $produits = Produit::findAll();
-        view('panier.panier', compact('produits'));
+        view('panier.panier', compact('panier'));
     }
 
 

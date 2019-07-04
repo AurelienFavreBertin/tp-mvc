@@ -10,22 +10,18 @@
 
             <tr>
                 <th>#id</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Prix</th>
-                <th>Stock</th>
-                <th>Photo</th>
+                <th>client_id</th>
+                <th>produit_id</th>
+                <th>quantite</th>
             </tr>
 
-            <?php foreach ($produits as $produit) : ?>
+            <?php foreach ($panier as $p) : ?>
 
                 <tr>
-                    <td><?= $produit['id'] ?></td>
-                    <td><?= $produit['nom'] ?></td>
-                    <td><?= $produit['description'] ?></td>
-                    <td><?= $produit['prix'] ?></td>
-                    <td><?= $produit['stock'] ?></td>
-                    <td><img src="<?= uploads_url($produit['photo']) ?>" height="100"></td>
+                    <td><?= $p['id'] ?></td>
+                    <td><?= $p['client_id'] ?></td>
+                    <td><?= $p['produit_id'] ?></td>
+                    <td><?= $p['quantite'] ?></td>
                 </tr>
 
             <?php endforeach; ?>
