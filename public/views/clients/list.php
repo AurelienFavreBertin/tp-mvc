@@ -24,7 +24,7 @@
 
                 <tr>
                     <td><?= $client['id'] ?></td>
-                    <td><?= $client['nom'] ?></td>
+                    <td><a href="<?= url('panier') ?>"><?= $client['nom'] ?></a></td>
                     <td><?= $client['email'] ?></td>
                     <td><?= $client['telephone'] ?></td>
                     <td><?= $client['adresse'] ?></td>
