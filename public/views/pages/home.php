@@ -8,7 +8,7 @@
     <hr>
     <ol style="list-style-type: none;">
         <li>
-            <a href="<?= url('clients/add') ?>" class="btn btn-dark">Ajout d'un client</a>
+            <a href="<?= url('../clients/add') ?>" class="btn btn-dark">Ajout d'un client</a>
         </li>
         <br />
         <li>
