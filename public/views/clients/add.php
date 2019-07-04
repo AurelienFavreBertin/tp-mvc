@@ -27,7 +27,6 @@
                 <input class="form-control" type="text" name="adresse" placeholder="adresse" id="">
             </div>
 
-            <br />
             <button class="btn btn-success float-right" type="submit">Ajouter</button>
         </form><br />
         </div>
