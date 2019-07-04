@@ -19,6 +19,7 @@
                 <div class="col-8">
 
                     <tr>
+                        <th>Photo</th>
                         <th>#id</th>
                         <th>Client</th>
                         <th>Produit</th>
@@ -29,6 +30,7 @@
                     <?php foreach ($client->getPanier() as $panier) : ?>
 
                         <tr>
+                            <td><img src="<?= uploads_url($panier['photo']) ?>" height="100"></td>
                             <td><?= $panier['id'] ?></td>
                             <td><?= $client->getNom() ?></td>
                             <td><?= $panier['nom'] ?></td>
