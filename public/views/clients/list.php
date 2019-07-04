@@ -26,7 +26,7 @@
                     <td><?= $client['id'] ?></td>
                     <td><a href="<?= url('clients/' . $client['id']) ?>"><?= $client['nom'] ?></a></td>
                     <td><?= $client['email'] ?></td>
-                    <td><?= $client['telephone'] ?></td>
+                    <td>0<?= $client['telephone'] ?></td>
                     <td><?= $client['adresse'] ?></td>
                     <td><?= $client['cp'] ?></td>
                     <td><?= $client['ville'] ?></td>

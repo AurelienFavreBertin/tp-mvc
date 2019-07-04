@@ -93,6 +93,21 @@ class Client extends Db {
 
     }
 
+    public function getTotal() {
+        
+        $panier = $this->getPanier();
+
+        $total = 0;
+
+        $result = array_map(function($produit) use (&$total) {
+
+            $total += $produit['prix'] * $produit['quantite'];
+
+        }, $panier);
+
+        return $total;
+    }
+
     public function save()
     {
         $data = [

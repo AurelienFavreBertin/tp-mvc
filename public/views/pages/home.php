@@ -35,14 +35,4 @@
 
 <br />
 
-<div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
-    <h3>Visualiser :</h3>
-    <hr>
-    <ol style="list-style-type: none;">
-        <li>
-            <a href="<?= url('panier') ?>" class="btn btn-dark">Panier</a>
-        </li>
-    </ol>
-</div>
-
 <?php $content = ob_get_clean() ?> <?php view('template', compact('content')); ?>
