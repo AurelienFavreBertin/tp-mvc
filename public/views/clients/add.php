@@ -1,10 +1,8 @@
 <?php ob_start(); ?>
 
-<a href="home.php" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
-    < Retour à la page d'accueil</a>
+<a href="<?= url('') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
+    < Retour à la page d'accueil</a> <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
 
-        <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
-        
         <h2>Ajouter un client</h2>
 
         <hr>
