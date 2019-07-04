@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< Updated upstream
 class Produit extends Db
 {
 
@@ -16,36 +15,16 @@ class Produit extends Db
 
     public function setId($id)
     {
-=======
-class Produit extends Db {
-
-    const TABLE_NAME = "clients";
-
-    protected $id;
-    protected $nom;
-    protected $photo;
-    protected $description;
-    protected $prix;
-    protected $stock;
-
-
-    public function setId($id) {
->>>>>>> Stashed changes
         $this->id = $id;
         return $this;
     }
 
-<<<<<<< Updated upstream
     public function setNom($nom)
     {
-=======
-    public function setNom($nom) {
->>>>>>> Stashed changes
         $this->nom = $nom;
         return $this;
     }
 
-<<<<<<< Updated upstream
     public function setDescription($description)
     {
         $this->description = $description;
@@ -121,65 +100,15 @@ class Produit extends Db {
             "photo"         => $this->getPhoto()
         ];
 
-=======
-    public function setEmail( $email) {
-        $this-> email = $email;
-        return $this;
-    }
-
-    public function setTelephone( $telephone) {
-        $this-> telephone = $telephone;
-        return $this;
-    }
-
-    public function setAdresse( $adresse)
-    {
-        $this-> adresse = $adresse;
-        return $this;
-    }
-
-
-
-
-    public function getNom() {
-        return $this-> nom;
-    }
-    public function getEmail() {
-        return $this-> email;
-    }
-    public function getTelephone() {
-        return $this-> telephone;
-    }
-    public function getAdresse() {
-        return $this-> adresse;
-    }
-
-    public function save()
-    {
-        $data = [
-            "nom"    => $this->getNom(),
-            "email"    => $this->getEmail(),
-            "telephone"    => $this->getTelephone(),
-            "adresse"    => $this->getAdresse()
-        ];
->>>>>>> Stashed changes
         //if ($this->id > 0) return $this->update();
         $nouvelId = Db::dbCreate(self::TABLE_NAME, $data);
         $this->setId($nouvelId);
         return $this;
     }
 
-<<<<<<< Updated upstream
     public static function findAll()
     {
         $data = Db::dbFind(self::TABLE_NAME);
         return $data;
     }
 }
-=======
-    public static function findAll() {
-        $data = Db::dbFind(self::TABLE_NAME);
-        return $data;
-    }
-}
->>>>>>> Stashed changes

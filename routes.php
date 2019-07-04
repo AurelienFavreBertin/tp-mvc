@@ -12,5 +12,7 @@ $router->get('produits/add', 'ProduitsController@add');
 $router->post('produits/add', 'ProduitsController@save');
 $router->get('produits/list', 'ProduitsController@list');
 
+$router->get('panier', 'PaniersController@list');
+
 // Run it!
 $router->run();
