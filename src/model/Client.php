@@ -52,6 +52,9 @@ class Client extends Db {
     }
 
 
+    public function getId() {
+        return $this->id;
+    }
 
 
     public function getNom() {
@@ -71,6 +74,23 @@ class Client extends Db {
     }
     public function getVille() {
         return $this-> ville;
+    }
+
+    public function getPanier() {
+
+        $bdd = $this->getDb();
+
+        $req = 'SELECT *
+                FROM panier
+                INNER JOIN produits
+                    ON panier.produit_id = produits.id
+                WHERE panier.client_id = ' . $this->getId();
+
+        $res = $bdd->query($req);
+        $produits = $res->fetchAll(PDO::FETCH_ASSOC);
+
+        return $produits;
+
     }
 
     public function save()
@@ -93,5 +113,26 @@ class Client extends Db {
     public static function findAll() {
         $data = Db::dbFind(self::TABLE_NAME);
         return $data;
+    }
+
+    public static function findOne(int $id) {
+        $request = [
+            ['id', '=', $id]
+        ];
+        $element = Db::dbFind(self::TABLE_NAME, $request);
+        if (count($element) > 0) $element = $element[0];
+        else return;
+
+        $client = new Client;
+        $client->setId($element['id']);
+        $client->setNom($element['nom']);
+        $client->setEmail($element['email']);
+        $client->setTelephone($element['telephone']);
+        $client->setAdresse($element['adresse']);
+        $client->setCp($element['cp']);
+        $client->setVille($element['ville']);
+
+        return $client;
+
     }
 }

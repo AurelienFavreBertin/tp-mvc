@@ -27,4 +27,12 @@ class ClientsController {
 
         $this->list();
     }
+
+    public function show($id) {
+
+        $client = Client::findOne($id);
+
+        view('clients.show', compact('client'));
+
+    }
 }

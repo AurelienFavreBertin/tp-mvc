@@ -6,6 +6,17 @@
 
         <table style="margin-top:20px;" class="table">
 
+
+        <div class="row">
+            <div class="col-4">
+                Nom : <?= $client->getNom() ?>
+                Email:<?= $client->getEmail() ?>
+                Tel:<?= $client->getTelephone() ?>
+                Addresse : <?= $client->getAdresse() ?>
+            </div>
+            <div class="col-8"></div>
+        </div>
+
             <h2>Panier</h2>
 
             <tr>
@@ -15,13 +26,13 @@
                 <th>quantite</th>
             </tr>
 
-            <?php foreach ($panier as $p) : ?>
+            <?php foreach ($client->getPanier() as $panier) :?>
 
                 <tr>
-                    <td><?= $p['id'] ?></td>
-                    <td><?= $p['client_id'] ?></td>
-                    <td><?= $p['produit_id'] ?></td>
-                    <td><?= $p['quantite'] ?></td>
+                    <td><?= $panier['id'] ?></td>
+                    <td><?= $panier['client_id'] ?></td>
+                    <td><?= $panier['produit_id'] ?></td>
+                    <td><?= $panier['quantite'] ?></td>
                 </tr>
 
             <?php endforeach; ?>
