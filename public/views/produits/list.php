@@ -4,10 +4,10 @@
 <a href="<?= url('') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
     < Retour à la page d'accueil</a>
     
-    <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
+    <div class="box">
         
         <table style="margin-top:20px;" class="table">
-
+            <img class="icone left" src="<?= img_url('lister_produits.png') ?>" alt="Lister produits" />
             <h2>Liste des produits</h2>
 
                 <tr>

@@ -2,10 +2,10 @@
 
 
 <a href="<?= url('') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
-    < Retour à la page d'accueil</a> <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
+    < Retour à la page d'accueil</a> <div class="box">
 
         <table style="margin-top:20px;" class="table">
-
+            <img class="icone left" src="<?= img_url('lister_clients.png') ?>" alt="Lister clients" />
             <h2>Liste des clients</h2>
 
             <tr>
@@ -23,7 +23,7 @@
             <?php foreach ($clients as $client) : ?>
 
                 <tr>
-                    <td><a href="<?= url('clients/' . $client['id'] . '/delete') ?>"><img style="width:40px; height:40px; margin-right:10px;" src="../img/delete.png" alt="delete" /></a></td>
+                    <td><a href="<?= url('clients/' . $client['id'] . '/delete') ?>"><img style="width:40px; height:40px; margin-right:10px;" src="<?= img_url('delete_client.png') ?>" alt="delete" /></a></td>
                     <td><a href="<?= url('clients/' . $client['id']) ?>"><?= $client['nom'] ?></a></td>
                     <td><?= $client['email'] ?></td>
                     <td>0<?= $client['telephone'] ?></td>
