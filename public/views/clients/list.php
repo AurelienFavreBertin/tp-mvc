@@ -9,7 +9,8 @@
             <h2>Liste des clients</h2>
 
             <tr>
-                <th>Delete</th>
+                <th>Supprimer</th>
+                <th>Modifier</th>
                 <th>Nom</th>
                 <th>Email</th>
                 <th>Téléphone</th>
@@ -18,12 +19,11 @@
                 <th>Ville</th>
             </tr>
 
-
-
             <?php foreach ($clients as $client) : ?>
 
                 <tr>
-                    <td><a href="<?= url('clients/' . $client['id'] . '/delete') ?>"><img style="width:40px; height:40px; margin-right:10px;" src="<?= img_url('delete_client.png') ?>" alt="delete" /></a></td>
+                    <td><a href="<?= url('clients/' . $client['id'] . '/delete') ?>"><img class="icone_cli" src="<?= img_url('delete_client.png') ?>" alt="delete" /></a></td>
+                    <td><a href="<?= url('clients/' . $client['id'] . '/edit') ?>"><img class="icone_cli" src="<?= img_url('update_client.png') ?>" alt="update" /></a></td>
                     <td><a href="<?= url('clients/' . $client['id']) ?>"><?= $client['nom'] ?></a></td>
                     <td><?= $client['email'] ?></td>
                     <td>0<?= $client['telephone'] ?></td>

@@ -2,7 +2,7 @@
 
 
 <a href="<?= url('clients/list') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
-    < Retour à la page d'accueil</a>
+    < Retour à la liste des clients</a>
     
     <div class="box">
 

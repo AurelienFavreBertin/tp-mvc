@@ -25,15 +25,40 @@ class ClientsController {
 
         $client->save();
 
-        $this->list();
+        redirectTo('clients/list');
     }
 
+
+
+    public function edit($id) {
+        $client = Client::findOne($id);
+
+        view('clients.edit', compact('client'));
+    }
+
+    public function update($id)
+    {
+        $client = Client::findOne($id);
+        $client->setNom($_POST['nom']);
+        $client->setEmail($_POST['email']);
+        $client->setTelephone($_POST['telephone']);
+        $client->setAdresse($_POST['adresse']);
+        $client->setCp($_POST['cp']);
+        $client->setVille($_POST['ville']);
+        $client->update();
+
+        // On redirige vers la page de l'étudiant
+        redirectTo('clients/' . $client->getId());
+    }
+
+
     public function delete($id) {
-        $client = Db::findOne($id);
+        $client = Client::findOne($id);
         $client->delete();
 
         // On redirige vers la liste des étudiants
-        Header('Location: ' . url('clients/list'));
+        redirectTo('clients/list');
+
     }
 
     public function show($id) {
