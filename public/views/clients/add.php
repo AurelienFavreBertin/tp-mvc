@@ -1,8 +1,10 @@
 <?php ob_start(); ?>
 
 <a href="<?= url('') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
-    < Retour à la page d'accueil</a> <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
-
+    < Retour à la page d'accueil</a>
+    
+    <div class="box">
+        <img class="icone left" src="<?= img_url('add_clients.png') ?>" alt="Ajouter client" />
         <h2>Ajouter un client</h2>
 
         <hr>

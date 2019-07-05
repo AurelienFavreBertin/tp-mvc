@@ -28,12 +28,12 @@ class ClientsController {
         $this->list();
     }
 
-    public function delete( $id) {
+    public function delete($id) {
         $client = Db::findOne($id);
         $client->delete();
 
         // On redirige vers la liste des étudiants
-        Header('Location: ' . url( 'http://localhost/tp-mvc//clients/list'));
+        Header('Location: ' . url('clients/list'));
     }
 
     public function show($id) {
