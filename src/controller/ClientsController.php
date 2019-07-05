@@ -25,15 +25,16 @@ class ClientsController {
 
         $client->save();
 
+
         $this->list();
     }
 
     public function delete( $id) {
-        $client = Db::findOne($id);
+        $client = Client::findOne($id);
         $client->delete();
 
-        // On redirige vers la liste des étudiants
-        Header('Location: ' . url( 'http://localhost/tp-mvc//clients/list'));
+        // On redirige vers la liste des clients
+        view('clients.list', compact('client'));
     }
 
     public function show($id) {
