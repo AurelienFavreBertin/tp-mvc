@@ -33,7 +33,7 @@ class ClientsController {
         $client->delete();
 
         // On redirige vers la liste des étudiants
-        Header('Location: ' . url('students'));
+        Header('Location: ' . url( 'http://localhost/tp-mvc//clients/list'));
     }
 
     public function show($id) {

@@ -23,7 +23,7 @@
             <?php foreach ($clients as $client) : ?>
 
                 <tr>
-                    <td><a href="<?= url('clients/' . $client['id']) ?>"><img style="width:40px; height:40px; margin-right:10px;" src="../img/delete.png" alt="delete" /></a></td>
+                    <td><a href="<?= url('clients/' . $client['id'] . '/delete') ?>"><img style="width:40px; height:40px; margin-right:10px;" src="../img/delete.png" alt="delete" /></a></td>
                     <td><a href="<?= url('clients/' . $client['id']) ?>"><?= $client['nom'] ?></a></td>
                     <td><?= $client['email'] ?></td>
                     <td>0<?= $client['telephone'] ?></td>
