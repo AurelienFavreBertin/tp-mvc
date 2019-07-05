@@ -2,7 +2,9 @@
 
 
 <a href="<?= url('clients/list') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
-    < Retour à la page d'accueil</a> <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
+    < Retour à la page d'accueil</a>
+    
+    <div class="box">
 
         <table style="margin-top:20px;" class="table">
 
