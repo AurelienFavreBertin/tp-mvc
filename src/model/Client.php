@@ -55,8 +55,6 @@ class Client extends Db {
     public function getId() {
         return $this->id;
     }
-
-
     public function getNom() {
         return $this-> nom;
     }
@@ -125,12 +123,26 @@ class Client extends Db {
         return $this;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     public function update()
     {
         if ($this->id > 0) {
             $data = [
+<<<<<<< HEAD
                 "firstname"  => $this->firstname(),
                 "surname"   => $this->surname()
+=======
+                "id"        => $this->getId(),
+                "nom"       => $this->getNom(),
+                "email"     => $this->getEmail(),
+                "telephone" => $this->getTelephone(),
+                "adresse"   => $this->getAdresse(),
+                "cp"        => $this->getCp(),
+                "ville"     => $this->getVille()
+>>>>>>> master
             ];
             Db::dbUpdate(self::TABLE_NAME, $data);
             return $this;
@@ -138,10 +150,17 @@ class Client extends Db {
         return;
     }
 
+<<<<<<< HEAD
     public function delete()
     {
         $data = [
             'id' => $this->id(),
+=======
+
+    public function delete() {
+        $data = [
+            'id' => $this->getId(),
+>>>>>>> master
         ];
 
         Db::dbDelete(self::TABLE_NAME, $data);
@@ -150,6 +169,12 @@ class Client extends Db {
 
     public static function findAll() {
         $data = Db::dbFind(self::TABLE_NAME);
+        return $data;
+    }
+
+    public static function find(array $request)
+    {
+        $data = Db::dbFind(self::TABLE_NAME, $request);
         return $data;
     }
 

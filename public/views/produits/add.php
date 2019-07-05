@@ -3,8 +3,8 @@
 <a href="<?= url('') ?>" class="btn btn-sm btn-secondary" style="margin-bottom:30px;">
     < Retour à la page d'accueil</a>
     
-    <div style="background-color:lightgrey; border-radius: 10px; padding:20px;">
-
+    <div class="box">
+        <img class="icone left" src="<?= img_url('add_produit.png') ?>" alt="Ajouter produit" />
         <h2>Ajouter un produit</h2>
 
         <hr>
