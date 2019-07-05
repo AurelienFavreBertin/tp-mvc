@@ -1,0 +1,38 @@
+/*---- PT GENIE ----*/
+
+.left {
+    float: left;
+}
+
+.logo {
+    width:62px;
+    height:62px;
+    margin-right:20px;
+}
+
+.titre {
+    margin-bottom:-5px;
+}
+
+em {
+    color:#bfbfbf;
+}
+
+.box {
+    border:5px solid #66d9ff;
+    border-radius: 10px;
+    padding:20px;
+    margin-bottom:20px;
+    background:linear-gradient(#e6f7ff, #fff);
+}
+
+.icone {
+    width:40px;
+    height:40px;
+    margin-right:10px;
+}
+
+ol {
+    list-style-type: none;
+    padding:0;
+}
