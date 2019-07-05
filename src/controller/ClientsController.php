@@ -28,6 +28,14 @@ class ClientsController {
         $this->list();
     }
 
+    public function delete( $id) {
+        $client = Db::findOne($id);
+        $client->delete();
+
+        // On redirige vers la liste des étudiants
+        Header('Location: ' . url('students'));
+    }
+
     public function show($id) {
 
         $client = Client::findOne($id);
