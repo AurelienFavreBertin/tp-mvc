@@ -4,7 +4,7 @@
     <img class=" logo" src="<?= img_url('logo.png') ?>" alt="Logo">
 </div>
 <h1 class="text-left titre">Petit Génie</h1>
-<em>Panneau de configuration</em>
+<em>Le panneau de configuration</em>
 
 <hr>
 <div class="row">

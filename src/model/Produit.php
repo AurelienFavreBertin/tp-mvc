@@ -45,29 +45,38 @@ class Produit extends Db
 
     public function setPhoto($photo)
     {
-        if (isset($photo) and $photo['error'] == 0) {
-            // Testons si le fichier n'est pas trop gros
-            if ($photo['size'] <= 10000000) {
-                // Testons si l'extension est autorisée
-                $infosfichier = pathinfo($photo['name']);
-                $extension_upload = $infosfichier['extension'];
-                $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
-                if (in_array($extension_upload, $extensions_autorisees)) {
-                    // On peut valider le fichier et le stocker définitivement
-                    move_uploaded_file($photo['tmp_name'],  './public/uploads/' . $photo['name']);
+        if (!empty($photo['name'])) {
+            if (isset($photo) and $photo['error'] == 0) {
+                // Testons si le fichier n'est pas trop gros
+                if ($photo['size'] <= 10000000) {
+                    // Testons si l'extension est autorisée
+                    $infosfichier = pathinfo($photo['name']);
+                    $extension_upload = $infosfichier['extension'];
+                    $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+                    if (in_array($extension_upload, $extensions_autorisees)) {
+                        // On peut valider le fichier et le stocker définitivement
+                        move_uploaded_file($photo['tmp_name'],  './public/uploads/' . $photo['name']);
 
-                    $this->photo = $photo['name'];
-                    return $this;
+                        $this->photo = $photo['name'];
+                        return $this;
+                    }
+                } else {
+                    throw new Exception('photo trop grande');
                 }
             } else {
-                throw new Exception('photo trop grande');
+                throw new Exception('une erreur est survenue à l\'upload du fichier');
             }
-        } else {
-            throw new Exception('une erreur est survenue à l\'upload du fichier');
         }
+
+        return;
+        
     }
 
 
+    public function getId()
+    {
+        return $this->id;
+    }
     public function getNom()
     {
         return $this->nom;
@@ -106,9 +115,66 @@ class Produit extends Db
         return $this;
     }
 
+
+    public function update()
+    {
+        if ($this->id > 0) {
+            $data = [
+                "id"            => $this->getId(),
+                "nom"           => $this->getNom(),
+                "description"   => $this->getDescription(),
+                "prix"          => $this->getPrix(),
+                "stock"         => $this->getStock(),
+                //"photo"         => $this->getPhoto()
+            ];
+            Db::dbUpdate(self::TABLE_NAME, $data);
+            return $this;
+        }
+        return;
+    }
+
+
+    public function delete()
+    {
+        $data = [
+            'id' => $this->getId(),
+        ];
+
+        Db::dbDelete(self::TABLE_NAME, $data);
+        return;
+    }
+
+
     public static function findAll()
     {
         $data = Db::dbFind(self::TABLE_NAME);
         return $data;
+    }
+
+
+    public static function find(array $request)
+    {
+        $data = Db::dbFind(self::TABLE_NAME, $request);
+        return $data;
+    }
+
+    public static function findOne(int $id)
+    {
+        $request = [
+            ['id', '=', $id]
+        ];
+        $element = Db::dbFind(self::TABLE_NAME, $request);
+        if (count($element) > 0) $element = $element[0];
+        else return;
+
+        $produit = new Produit;
+        $produit->setId($element['id']);
+        $produit->setNom($element['nom']);
+        $produit->setDescription($element['description']);
+        $produit->setPrix($element['prix']);
+        $produit->setStock($element['stock']);
+        $produit->setPhoto($element['photo']);
+
+        return $produit;
     }
 }
