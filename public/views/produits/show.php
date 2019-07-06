@@ -13,9 +13,11 @@
                     <b>Description:</b> <?= $produit->getDescription() ?> <br />
                     <b>Prix:</b> <?= $produit->getPrix() ?> <br />
                     <b>Stock:</b> <?= $produit->getStock() ?> <br />
+                    
                     <b>Photo:</b> <img src="<?= uploads_url($produit->getPhoto()) ?>" height="100"> <br />
                 </div>
             </div>
+            
 
         </table>
 
