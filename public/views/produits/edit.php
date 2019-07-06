@@ -25,7 +25,7 @@
                 <input class="form-control" type="number" name="stock" value="<?= $produit->getStock() ?>" id="stock">
             </div>
 
-            <button class="btn btn-success float-right" type="submit">Ajouter</button>
+            <button class="btn btn-success float-right" type="submit">Modifier</button>
         </form><br />
         </div>
 
