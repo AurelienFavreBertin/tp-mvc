@@ -9,24 +9,19 @@
 
         <hr>
 
-        <form style="padding:10px;" class="form" method="post" action="<?= url('produits/add') ?>" enctype="multipart/form-data">
+        <form style="padding:10px;" class="form" method="post" action="<?= url('paniers/add') ?>" >
 
             <div class="form-group">
-                <input class="form-control" type="text" name="nom" placeholder="nom" id="nom">
+                <input class="form-control" type="number" name="client_id" placeholder="client_id" id="client_id">
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="text" name="description" placeholder="description" id="description">
+                <input class="form-control" type="number" name="produit_id" placeholder="produit_id" id="produit_id">
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="number" name="prix" placeholder="prix" id="prix">
+                <input class="form-control" type="number" name="quantite" placeholder="quantite" id="quantite">
             </div>
-
-            <div class="form-group">
-                <input class="form-control" type="number" name="stock" placeholder="stock" id="stock">
-            </div>
-
 
 
             <button class="btn btn-success float-right" type="submit">Ajouter</button>
@@ -34,4 +29,4 @@
         </div>
 
         <?php $content = ob_get_clean() ?>
-        <?php view('template', compact('content')); ?>
+        <?php view('template', compact('content') ); ?>

@@ -1,6 +1,6 @@
 <?php
 
-class Client extends Db {
+class Panier extends Db {
 
     const TABLE_NAME = "panier";
 
@@ -136,16 +136,13 @@ class Client extends Db {
         if (count($element) > 0) $element = $element[0];
         else return;
 
-        $clientPanier = new ClientPanier;
-        $clientPanier->setId($element['id']);
-        $clientPanier->setNom($element['nom']);
-        $clientPanier->setEmail($element['email']);
-        $clientPanier->setTelephone($element['telephone']);
-        $clientPanier->setAdresse($element['adresse']);
-        $clientPanier->setCp($element['cp']);
-        $clientPanier->setVille($element['ville']);
+        $panierClient = new PanierClient;
+        $panierClient->setId($element['id']);
+        $panierClient->setClient_id($element['client_id']);
+        $panierClient->setProduit_id($element['produit_id']);
+        $panierClient->setQuantite($element['quantite']);
 
-        return $clientPanier;
+        return $panierClient;
 
     }
 }

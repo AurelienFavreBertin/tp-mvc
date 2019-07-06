@@ -8,14 +8,11 @@
 
         <table style="margin-top:20px;" class="table">
 
-            <a href="<?= url('clients/paniers/add') ?>" class="btn btn-sm btn-primary" style="margin-bottom:30px; float: right">
+            <a href="<?= url('paniers/ ' . $client->getId() . '/add') ?>" class="btn btn-sm btn-primary" style="margin-bottom:30px; float: right">
             Ajouter un article au panier
             </a>
             
             <h2>Panier de  <?= $client->getNom() ?></h2>
-
-
-            
 
 
 
@@ -23,7 +20,7 @@
                 <div class="col-4">
                     <br>
                     <b>Email:</b> <?= $client->getEmail() ?> <br />
-                    <b>Tél:</b> 0<?= $client->getTelephone() ?> <br />
+                    <b>Tél:</b> <?= $client->getTelephone() ?> <br />
                     <b>Adresse:</b> <?= $client->getAdresse() ?> <br />
                     <b>Code postal:</b> <?= $client->getCp() ?> <br />
                     <b>Ville:</b> <?= $client->getVille() ?> <br />
