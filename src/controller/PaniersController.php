@@ -3,10 +3,10 @@
 class PaniersController
 {
 
-    public function list()
+    public function add()
     {
-        $panier = Panier::findAll();
-        view('panier.panier', compact('panier'));
+        $clientPanier = ClientPanier::findAll();
+        view('paniers.add', compact('panier'));
     }
 
 

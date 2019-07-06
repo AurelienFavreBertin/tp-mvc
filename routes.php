@@ -21,7 +21,7 @@ $router->get('produits/{id}/edit', 'ProduitsController@edit');
 $router->post('produits/{id}/edit', 'ProduitsController@update');
 $router->get('produits/{id}', 'ProduitsController@show');
 
-$router->get('panier', 'PaniersController@list');
+$router->get('paniers/add', 'PaniersController@add');
 
 // Run it!
 $router->run();

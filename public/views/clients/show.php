@@ -8,7 +8,7 @@
 
         <table style="margin-top:20px;" class="table">
 
-            <a href="#" class="btn btn-sm btn-primary" style="margin-bottom:30px; float: right">
+            <a href="<?= url('clients/paniers/add') ?>" class="btn btn-sm btn-primary" style="margin-bottom:30px; float: right">
             Ajouter un article au panier
             </a>
             
