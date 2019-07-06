@@ -25,7 +25,7 @@
                 <tr>
                     <td><a href="<?= url('produits/' . $produit['id'] . '/delete') ?>"><img class="icone_cli" src="<?= img_url('delete_produit.png') ?>" alt="delete" /></a></td>
                     <td><a href="<?= url('produits/' . $produit['id'] . '/edit') ?>"><img class="icone_cli" src="<?= img_url('update_produit.png') ?>" alt="update" /></a></td>
-                    <td><?= $produit['nom'] ?></td>
+                    <td><a href="<?= url('produits/' . $produit['id']) ?>"><?= $produit['nom'] ?></a></td>
                     <td><?= $produit['description'] ?></td>
                     <td><?= $produit['prix'] ?></td>
                     <td><?= $produit['stock'] ?></td>
