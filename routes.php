@@ -16,8 +16,13 @@ $router->get('clients/{id}', 'ClientsController@show');
 $router->get('produits/add', 'ProduitsController@add');
 $router->post('produits/add', 'ProduitsController@save');
 $router->get('produits/list', 'ProduitsController@list');
+$router->get('produits/{id}/delete', 'ProduitsController@delete');
+$router->get('produits/{id}/edit', 'ProduitsController@edit');
+$router->post('produits/{id}/edit', 'ProduitsController@update');
+$router->get('produits/{id}', 'ProduitsController@show');
 
-$router->get('panier', 'PaniersController@list');
+$router->get('paniers/{id}/add', 'PaniersController@add');
+$router->post('paniers/add', 'PaniersController@save');
 
 // Run it!
 $router->run();

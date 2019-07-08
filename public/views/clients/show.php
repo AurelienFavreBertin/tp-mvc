@@ -8,12 +8,19 @@
 
         <table style="margin-top:20px;" class="table">
 
+            <a href="<?= url('paniers/ ' . $client->getId() . '/add') ?>" class="btn btn-sm btn-primary" style="margin-bottom:30px; float: right">
+            Ajouter un article au panier
+            </a>
+            
+            <h2>Panier de  <?= $client->getNom() ?></h2>
+
+
 
             <div class="row">
                 <div class="col-4">
-                    <b>Nom:</b> <?= $client->getNom() ?> <br />
+                    <br>
                     <b>Email:</b> <?= $client->getEmail() ?> <br />
-                    <b>Tél:</b> 0<?= $client->getTelephone() ?> <br />
+                    <b>Tél:</b> <?= $client->getTelephone() ?> <br />
                     <b>Adresse:</b> <?= $client->getAdresse() ?> <br />
                     <b>Code postal:</b> <?= $client->getCp() ?> <br />
                     <b>Ville:</b> <?= $client->getVille() ?> <br />
@@ -23,7 +30,7 @@
                     <tr>
                         <th>Photo</th>
                         <th>#id</th>
-                        <th>Client</th>
+                        
                         <th>Produit</th>
                         <th>Quantité</th>
                         <th>Prix</th>
@@ -34,7 +41,6 @@
                         <tr>
                             <td><img src="<?= uploads_url($panier['photo']) ?>" height="100"></td>
                             <td><?= $panier['id'] ?></td>
-                            <td><?= $client->getNom() ?></td>
                             <td><?= $panier['nom'] ?></td>
                             <td><?= $panier['quantite'] ?></td>
                             <td><?= $panier['prix'] ?></td>
@@ -54,7 +60,9 @@
         </div>
 
         <br /><br />
-        </div>
+    </div>
+    <a href="#" class="btn btn-sm btn-warning" style="margin-bottom:30px; padding-left: 50px; padding-right: 50px; float: right">
+    Payer</a>
 
         <?php $content = ob_get_clean() ?>
         <?php view('template', compact('content')); ?>
