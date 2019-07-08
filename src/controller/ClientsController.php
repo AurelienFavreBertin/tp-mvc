@@ -25,18 +25,6 @@ class ClientsController {
 
         $client->save();
 
-<<<<<<< HEAD
-
-        $this->list();
-    }
-
-    public function delete( $id) {
-        $client = Client::findOne($id);
-        $client->delete();
-
-        // On redirige vers la liste des clients
-        view('clients.list', compact('client'));
-=======
         redirectTo('clients/list');
     }
 
@@ -71,7 +59,6 @@ class ClientsController {
         // On redirige vers la liste des étudiants
         redirectTo('clients/list');
 
->>>>>>> master
     }
 
     public function show($id) {

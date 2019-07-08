@@ -3,10 +3,10 @@
 class PaniersController
 {
 
-    public function add()
+    public function add($id)
     {
         
-        view('paniers.add');
+        view('paniers.add', compact('id'));
     }
 
     public function save()

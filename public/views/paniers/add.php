@@ -11,10 +11,8 @@
 
         <form style="padding:10px;" class="form" method="post" action="<?= url('paniers/add') ?>" >
 
-            <div class="form-group">
-                <input class="form-control" type="number" name="client_id" placeholder="client_id" id="client_id">
-            </div>
-
+            <input type="hidden" name="client_id" value="<?= $id ?>">
+            
             <div class="form-group">
                 <input class="form-control" type="number" name="produit_id" placeholder="produit_id" id="produit_id">
             </div>

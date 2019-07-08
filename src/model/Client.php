@@ -123,18 +123,10 @@ class Client extends Db {
         return $this;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
     public function update()
     {
         if ($this->id > 0) {
             $data = [
-<<<<<<< HEAD
-                "firstname"  => $this->firstname(),
-                "surname"   => $this->surname()
-=======
                 "id"        => $this->getId(),
                 "nom"       => $this->getNom(),
                 "email"     => $this->getEmail(),
@@ -142,7 +134,6 @@ class Client extends Db {
                 "adresse"   => $this->getAdresse(),
                 "cp"        => $this->getCp(),
                 "ville"     => $this->getVille()
->>>>>>> master
             ];
             Db::dbUpdate(self::TABLE_NAME, $data);
             return $this;
@@ -150,17 +141,10 @@ class Client extends Db {
         return;
     }
 
-<<<<<<< HEAD
-    public function delete()
-    {
-        $data = [
-            'id' => $this->id(),
-=======
 
     public function delete() {
         $data = [
             'id' => $this->getId(),
->>>>>>> master
         ];
 
         Db::dbDelete(self::TABLE_NAME, $data);
